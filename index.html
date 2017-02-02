@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css"/>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+    <title>News Portal</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css"/>
   </head>
 
   <body>
-    <header>
-    </header>
-    <main></main>
-    <footer></footer>
+    <div id="top">
+      <div id="top-int">
+        <div id="topleft">
+          <ul>
+            <li><a href="./" class="active">Home</a></li>
+            <li><a href="quem-somos">Quem Somos</a></li>
+            <li><a href="anuncie-aqui">Anuncie Aqui</a></li>
+            <li><a href="contato">Contato</a></li>
+          </ul>
+        </div>
+        <div id="topright"><i>
+          <button id="searchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <input type="text" name="busca" id="topsearch" placeholder="Busca..."/>
+          <a id="youtube" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+          <a id="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a id="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a id="googleplus" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+          <a id="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="top2">
+      <div id="top2-int">
+        <div id="logo">News Portal</div>
+        <div class="banner"></div>
+      </div>
+    </div>
+    <div class="menu">
+      <div id="menu-int">
+        <ul>
+          <li><a href="./" class="active">Home</a></li>
+          <li><a href="./">Economy</a></li>
+          <li>
+            <a href="./">Entertainment</a>
+            <i class="fa fa-sort-desc" aria-hidden="true"></i>
+            <div class="submenu">
+              <a href="./"><div class="submenuitem">Submenu 1</div></a>
+              <a href="./"><div class="submenuitem">Submenu 2</div></a>
+              <a href="./"><div class="submenuitem">Submenu 3</div></a>
+              <a href="./"><div class="submenuitem">Submenu 4</div></a>
+              <a href="./"><div class="submenuitem">Submenu 5</div></a>
+            </div>
+          </li>
+          <li>
+            <a href="./">Sports</a>
+            <i class="fa fa-sort-desc" aria-hidden="true"></i>
+            <div class="submenu">
+              <a href="./"><div class="submenuitem">Submenu 1</div></a>
+              <a href="./"><div class="submenuitem">Submenu 2</div></a>
+              <a href="./"><div class="submenuitem">Submenu 3</div></a>
+              <a href="./"><div class="submenuitem">Submenu 4</div></a>
+              <a href="./"><div class="submenuitem">Submenu 5</div></a>
+              <a href="./"><div class="submenuitem">Submenu 6</div></a>
+            </div>
+          </li>
+          <li><a href="./">General</a></li>
+          <li>
+            <a href="./">News</a>
+            <i class="fa fa-sort-desc" aria-hidden="true"></i>
+            <div class="submenu">
+              <a href="./"><div class="submenuitem">Submenu 1</div></a>
+              <a href="./"><div class="submenuitem">Submenu 2</div></a>
+              <a href="./"><div class="submenuitem">Submenu 3</div></a>
+              <a href="./"><div class="submenuitem">Submenu 4</div></a>
+            </div>
+          </li>
+          <li><a href="./">Police</a></li>
+          <li><a href="./">Videos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="latestnews">
+      <div id="latestnews-int"></div>
+    </div>
+
   </body>
 
 </html>
