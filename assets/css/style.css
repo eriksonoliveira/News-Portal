@@ -562,7 +562,6 @@ body {
 }
 
 footer {
-  height: 200px;
   background-color: #333;
   color: #FFF;
   padding: 30px 0;
@@ -570,12 +569,12 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: auto;
 }
 
 #foot-int {
   width: 100%;
   max-width: 1040px;
-  /*height: 140px;*/
   margin: auto;
 }
 
@@ -583,6 +582,13 @@ footer {
   width: 50%;
   /*height: 30px;*/
   float: left;
+  border-right: 1px solid #FFF;
+  box-sizing: border-box;
+}
+
+.footleft-menus {
+  float: left;
+  min-width: 50%;
 }
 
 #footleft ul {
@@ -618,10 +624,15 @@ footer {
 
 #footright {
   width: 50%;
-  height: 28px;
+  height: 48px;
   float: right;
   text-align: right;
   margin-top: 2px;
+}
+
+#footright #footright-title {
+  padding: 0 30px 5px 0;
+  font-size: 15px;
 }
 
 #footright a {
@@ -639,17 +650,14 @@ footer {
   color: #fff;
 }
 
-#footright input {
-    float: right;
-}
-
 
 @media only screen and (min-width: 903px) and (max-width: 1057px) {
   #top-int,
   #top2-int,
   #menu-int,
   #latestnews-int,
-  #container-int
+  #container-int,
+  #foot-int
   {
     max-width: 890px;
   }
@@ -687,7 +695,8 @@ footer {
   #top2-int,
   #menu-int,
   #latestnews-int,
-  #container-int
+  #container-int,
+  #foot-int
   {
     max-width: 768px;
   }
@@ -757,7 +766,8 @@ footer {
   #top2-int,
   #menu-int,
   #latestnews-int,
-  #container-int
+  #container-int,
+  #foot-int
   {
     max-width: 320px;
   }
