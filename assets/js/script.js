@@ -10,6 +10,11 @@ $(document).ready(function() {
   setSlideWidth();
 })
 
+//show search field on search button click
+$("#search-btn").hover(function() {
+  $(".top-search").addClass('show-search');
+});
+
 //Select slides and assign them the slideshow width for RWD
 function setSlideWidth() {
   $.each($(".slide"), function() {

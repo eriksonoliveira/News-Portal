@@ -73,16 +73,20 @@ body {
   line-height: 26px;
 }
 
-#topsearch {
-  width: 105px;
+.top-search {
+/*  width: 105px;*/
+  width: 0px;
   height: 20px;
+  position: absolute;
+  visibility: hidden;
   outline: 0;
   border-radius: 3px;
   margin-right: 3px;
   padding-left: 5px;
+  transition: 0.2s; 
 }
 
-#searchbtn {
+#search-btn {
   float: right;
   width: 26px;
   height: 26px;
@@ -92,9 +96,15 @@ body {
   text-align: center;
 }
 
-#searchbtn:hover {
+#search-btn:hover {
   background-color: #CE2020;
   cursor: pointer;
+}
+
+.show-search {
+  width: 105px;
+  position: relative;
+  visibility: visible;
 }
 
 #topright input {
