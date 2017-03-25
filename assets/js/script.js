@@ -8,28 +8,6 @@ $(document).ready(function() {
   carouselTimer = setInterval(moveSlide, 4000);
 
   setSlideWidth();
-
-  //Control the display of submenus on small screens
-  $(".menuitem").click(function(){
-    $(this).find(".submenu").toggleClass("showSubmenu");
-  });
-
-
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.menuitem')) {
-
-      var dropdowns = document.getElementsByClassName("submenu");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('showSubmenu')) {
-          openDropdown.classList.remove('showSubmenu');
-        }
-      }
-    }
-  }
-
 })
 
 //Select slides and assign them the slideshow width for RWD
@@ -89,3 +67,22 @@ function toggleMenu() {
   }
 }
 
+//Control the display of submenus on small screens
+  $(".menuitem").click(function(){
+    $(this).find(".submenu").toggleClass("showSubmenu");
+  });
+
+  // Close the dropdown if the user clicks outside of it
+  /*window.onclick = function(event) {
+    if (!event.target.matches('.menuitem')) {
+
+      var dropdowns = document.getElementsByClassName("submenu");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('showSubmenu')) {
+          openDropdown.classList.remove('showSubmenu');
+        }
+      }
+    }
+  }*/
