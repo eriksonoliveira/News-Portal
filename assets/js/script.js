@@ -3,24 +3,31 @@ var slideItem = 0;
 var carouselTimer = 0;
 
 $(document).ready(function() {
-  changeCircleColor();
+  changeCircleStyle();
 
-  carouselTimer = setInterval(moveSlide, 4000);
+  carouselTimer = setInterval(moveSlide, 5000);
 
-  setSlideWidth();
-})
+//  setSlideWidth();
+});
+
 
 //show search field on search button click
 $("#search-btn").hover(function() {
   $(".top-search").addClass('show-search');
 });
 
-//Select slides and assign them the slideshow width for RWD
+//Select slides and assign them the slideshow width
+/*
 function setSlideWidth() {
   $.each($(".slide"), function() {
     $(this).css("width", slideWidth);
   })
 }
+*/
+
+$(window).resize(function() {
+  slideWidth = $('#slideshow').outerWidth();
+});
 
 //Create slide animation
 function moveSlide() {
@@ -30,7 +37,7 @@ function moveSlide() {
     slideItem++;
   }
 
-  changeCircleColor();
+  changeCircleStyle();
 
   $('.slideshow-area').css("margin-left", (slideWidth * slideItem * (-1)) + "px");
 }
@@ -38,38 +45,44 @@ function moveSlide() {
 //move slide when the user clicks on the circle
 function changeSlide(pos) {
   slideItem = pos;
-  changeCircleColor();
+  changeCircleStyle();
   clearInterval(carouselTimer);
-  carouselTimer = setInterval(moveSlide, 4000);
+  carouselTimer = setInterval(moveSlide, 5000);
 
   $('.slideshow-area').css("margin-left", (slideWidth * slideItem * (-1)) + "px");
 }
 
 //change circle's color so that the user can identify which is active
-function changeCircleColor() {
+function changeCircleStyle() {
   $(".circle").each(function() {
     var circleId = $(this).attr('id');
     if(circleId == slideItem){
 
-    $(this).css("background-color", "#888");
+//    $(this).css("background-color", "#888");
+    $(this).addClass("active");
     } else {
 
-    $(this).css("background-color", "#CCC");
+    $(this).removeClass("active");
     }
-  })
+  });
 }
 
 //Control the display of the menu on small screens
 function toggleMenu() {
-  var menu = document.getElementById("menu");
+  var menu = document.getElementById("menu-list");
   //var isVisible = window.getComputedStyle(menu, null).getPropertyValue('display');
 
   //if (isVisible == "none") {
-  if (menu.style.display == "none" || menu.style.display == "") {
+/*  if (menu.style.display == "none" || menu.style.display == "") {
     menu.style.display = "block";
   } else {
     menu.style.display = "";
-  }
+  }*/
+  if($(menu).hasClass('active')) {
+     $(menu).removeClass('active');
+     } else {
+       $(menu).addClass('active');
+     }
 }
 
 //Control the display of submenus on small screens
